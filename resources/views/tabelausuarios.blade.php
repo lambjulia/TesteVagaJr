@@ -108,14 +108,15 @@
 	        })
 	    </script>	
     @endif
-<div class="container" style="display: flex;
+<div class="container" style="display: absolute;
                         justify-content: center;
                         align-items: center;
-                        height: 100%;
+                        height: 60%;
                         width: 8000px;
-                        padding-top: 80px; 
+                        padding-top: 20px;
+                        padding-left: 150px; 
                         ">
-    <div class="card" style="width: 80%">
+    <div class="card" style="width: 90%">
         
         <div class="form">
           <div class="text-center" style="justify-content: center; align-items: center;">
@@ -124,7 +125,7 @@
           </div>
           
 <div class="container-fluid no-padding table-responsive-sm" style="background-color: rgb(255, 255, 255)">
-    <table class="table table-striped nowrap" style="width:100%" id="exemplo">
+    <table class="table table-striped nowrap" style="width:100%" id="tabela">
         <thead style="align: center">
             <tr>
                 <th>ID</th>
@@ -151,7 +152,7 @@
                           @endswitch</td>
 
                           <td>
-                            <a class="btn btn-danger delete" onclick="destroy(this)"
+                            <a class="btn btn-danger delete" onclick="destroy()"
                             href="destroy/{{ $u->id }}">
                             Excluir</a>
                         </td>
@@ -169,6 +170,18 @@
             <div class="text-center" style="padding-left: 8px">
         <a href="{{ route('formulario') }}" class="btn btn-primary">Cadastrar Novo Usuário</a>
             </div>
+            <form method="GET" action="/pdf/{id}" enctype="multipart/form-data"  style="padding-left:9px">
+                <div class="form-group">
+                 
+                 <div class="control">
+                 
+                     <button type="submit" class="btn btn-primary">Relátorio PDF</button>
+                 
+                 </div>
+                 
+                </div>
+                 
+                </form> 
         </div>
     </table>
 </div>
@@ -206,7 +219,7 @@ for (var i = 0; i < deleteLinks.length; i++) {
 </script>
 <script>
        $(document).ready(function () {
-    $('#exemplo').DataTable({
+    $('#tabela').DataTable({
         select: false,
         responsive: true,
         "order": [

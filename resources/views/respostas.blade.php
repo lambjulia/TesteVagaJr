@@ -8,7 +8,7 @@ public function date() {
 echo "Hoje é dia: " . date("d/m/Y");
 }
 
-3. 
+3. A formula está errada pois se $i for maior que 4 não haverá o laço de repetição. A formula correta é:
 for ($i = 0; $i < 4; $i++){
     echo $i;
 }

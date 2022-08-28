@@ -18,7 +18,7 @@ Route::post('/update/{id}', 'App\Http\Controllers\UsuarioController@update')->na
 
 Route::get('/destroy/{id}', 'App\Http\Controllers\UsuarioController@destroy')->name('destroy');
 
-
+Route::get('/pdf/{id}', 'App\Http\Controllers\UsuarioController@gerarPDF');
 
 
 

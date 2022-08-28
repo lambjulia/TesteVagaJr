@@ -76,6 +76,7 @@ class="mx-auto w-40" src="{{asset('assets/img/nitronews.png')}}" alt="logo" />
               class="btn btn-primary btn-floating m-1"
               style="background-color: #ac2bac;"
               href="https://www.instagram.com/jjulialamb/"
+              target="_blank"
               role="button"
               ><i class="fab fa-instagram"></i
             ></a>
@@ -83,6 +84,7 @@ class="mx-auto w-40" src="{{asset('assets/img/nitronews.png')}}" alt="logo" />
               class="btn btn-primary btn-floating m-1"
               style="background-color: #0082ca;"
               href="https://www.linkedin.com/in/julia-lamb-337a92229/"
+              target="_blank"
               role="button"
               ><i class="fab fa-linkedin-in"></i
             ></a>
@@ -90,6 +92,7 @@ class="mx-auto w-40" src="{{asset('assets/img/nitronews.png')}}" alt="logo" />
               class="btn btn-primary btn-floating m-1"
               style="background-color: #333333;"
               href="https://github.com/lambjulia"
+              target="_blank"
               role="button"
               ><i class="fab fa-github"></i
             ></a>

@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Validator;
 use Carbon\Carbon;
 use App\Models\Usuario;
 use App\Models\Permissoes;
+use \PDF;
 
 
 class UsuarioController extends Controller
@@ -83,4 +84,14 @@ class UsuarioController extends Controller
         $delete->delete();
         return redirect()->route('tabelausuarios')->with('ExcluirUsuario', '402');
     }
+
+    public function gerarPDF()
+    {
+        $usuario = Usuario::all();
+
+        $pdf = PDF::loadView('pdf', compact('usuario'));
+
+        return $pdf->setPaper('a4')->stream('relatorio.pdf');
+    }
+
 }
